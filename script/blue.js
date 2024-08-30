@@ -18,7 +18,7 @@ module.exports.run = async function ({ api, event, args }) {
 		return api.sendMessage("Please Provide your question with blue 🔵", event.threadID, event.messageID);
 	}
 
-	api.sendMessage("TYPE KITA WAIT KALANG...", event.threadID, event.messageID); 
+	api.sendMessage("Veuillez patienter un instant...", event.threadID, event.messageID); 
 
 	const apiUrl = `https://bluerepoapislasttry.onrender.com/hercai?content=${content}`;
 

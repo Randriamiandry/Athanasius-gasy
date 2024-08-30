@@ -173,7 +173,7 @@ app.post('/login', async (req, res) => {
         console.log(`User ${cUser.value} is already logged in`);
         return res.status(400).json({
           error: false,
-          message: "Active user session detected; already logged in",
+          message: "Session utilisateur active détectée ; déjà connecté",
           user: existingUser
         });
       } else {
@@ -181,7 +181,7 @@ app.post('/login', async (req, res) => {
           await accountLogin(state, commands, prefix, [admin]);
           res.status(200).json({
             success: true,
-            message: 'Authentication process completed successfully; login achieved.'
+            message: 'Processus d'authentification terminé avec succès ; connexion réalisée.'
           });
         } catch (error) {
           console.error(error);
@@ -194,13 +194,13 @@ app.post('/login', async (req, res) => {
     } else {
       return res.status(400).json({
         error: true,
-        message: "There's an issue with the appstate data; it's invalid."
+        message: "Il y a un problème avec les données appstate ; c'est invalide."
       });
     }
   } catch (error) {
     return res.status(400).json({
       error: true,
-      message: "There's an issue with the appstate data; it's invalid."
+      message: "Il y a un problème avec les données appstate ; c'est invalide."
     });
   }
 });

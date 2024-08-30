@@ -21,7 +21,7 @@ module.exports.run = async function ({ api, event, args, admin }) {
 	async function sendMessage(thread) {
 		try {
 			await api.sendMessage(
-`Message for ATH[💬] \n━━━━━━━━━━━━━━━━━━━━━━━\n🔬:「${custom}」\n━━━━━━━━━━━━━━━━━━━━━━━\n BOT [🌐]➤ATH`,
+`Notification du bot administrateur à tous les groupes de discussion (ne répondez pas à ce message)[💬] \n━━━━━━━━━━━━━━━━━━━━━━━\n🔬:「${custom}」\n━━━━━━━━━━━━━━━━━━━━━━━\n BOT [🌐]➤ATH`,
 				thread.threadID
 			);
 			sentCount++;

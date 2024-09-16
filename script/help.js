@@ -25,7 +25,7 @@ module.exports.run = async function({
       let page = 1;
       let start = (page - 1) * pages;
       let end = start + pages;
-      let helpMessage = `⚙️Mes Commandes:\n\n`;
+      let helpMessage = `⚙️Mes Commandes🤖:\n\n`;
       for (let i = start; i < Math.min(end, commands.length); i++) {
         helpMessage += `\t${i + 1}. 「➽ ${prefix}${commands[i]} 」\n`;
       }
@@ -33,14 +33,14 @@ module.exports.run = async function({
       eventCommands.forEach((eventCommand, index) => {
         helpMessage += `\t${index + 1}. 「➽ ${prefix}${eventCommand} 」\n`;
       });
-      helpMessage += `\nPage ${page}/${Math.ceil(commands.length / pages)}. Pour afficher la page suivante, tapez '${prefix}help numéro de page'. Créateur: Athanasius Roger. En cas de problème, n'hésitez pas à contacter Athanasius sur: https://www.facebook.com/AthanasiusRoger .`;
+      helpMessage += `\nPage ${page}/${Math.ceil(commands.length / pages)}. ⚙️Pour afficher la page suivante, tapez '${prefix}help numéro de page'.          Créateur: Aᴛʜᴀɴᴀsɪᴜs Rᴏɢᴇʀ. Si vous rencontrez des difficultés🔧, n'hésitez pas à contacter Aᴛʜᴀɴᴀsɪᴜs sur: https://www.facebook.com/AthanasiusRoger .`;
       api.sendMessage(helpMessage, event.threadID, event.messageID);
     } else if (!isNaN(input)) {
       const page = parseInt(input);
       const pages = 20;
       let start = (page - 1) * pages;
       let end = start + pages;
-      let helpMessage = `⚙️Mes Commandes\n\n`;
+      let helpMessage = `⚙️Mes Commandes🤖\n\n`;
       for (let i = start; i < Math.min(end, commands.length); i++) {
         helpMessage += `\t${i + 1}. 「➽ ${prefix}${commands[i]} 」\n`;
       }
